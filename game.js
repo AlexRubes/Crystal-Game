@@ -6,26 +6,39 @@ $(document).ready(function(){
     let crystals = $("#crystals");
     let targetNumber ;
     let numberOptions = [10, 5, 3, 7];
+    let i = 0;
 
     //function init() {
 
-    targetNumber = Math.floor((Math.random() * 100) + 19);
-    console.log(targetNumber);
-    $("#number-to-guess").text(targetNumber);
+        targetNumber = Math.floor((Math.random() * 100) + 19);
+        console.log(targetNumber);
+        $("#number-to-guess").text(targetNumber);
+
         
-    // function resetGame () {
-    //     counter = 0;
-    //     numberOptions = [10, 5, 3, 7];
-    //     $("#score").empty();
-    // }
+    function resetGame () {
+         counter = 0;
+         numberOptions = [10, 5, 3, 7];
+         $("#score").empty();
+        
+         targetNumber = Math.floor((Math.random() * 100) + 19);
+         console.log(targetNumber);
+         $("#number-to-guess").text(targetNumber);
+ 
+     }
 
+    //console.log($(".crystal-value"));
+    $(".crystal-value").each(function(){
+        $(this).val(numberOptions[i]);
+        i += 1;
+        console.log();
+    });
     // create loop to assign value to each button
-    for (var i = 0; i < numberOptions.length; i++) {
+    // for (var i = 0; i < numberOptions.length; i++) {
 
-        let crystalButton = $(".crystal-value");
-        //assign buttons a value
-        crystalButton.val(numberOptions[i]);
-        }
+    //     let crystalButton = $(".crystal-value");
+    //     //assign buttons a value
+    //     crystalButton.val(numberOptions[i]);
+    //     }
     
     // create click event that works for all button clicks
     $("#crystals").on("click", function() {
@@ -42,12 +55,12 @@ $(document).ready(function(){
 
         if (counter === targetNumber) {
         $("#wins").text(wins++);
-        // resetGame();
+        resetGame();
         // init();
         }
         else if (counter >= targetNumber) {
         $("#losses").text(losses++);
-        // resetGame();
+        resetGame();
         // init();
         }
 
