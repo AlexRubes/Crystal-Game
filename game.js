@@ -26,20 +26,14 @@ $(document).ready(function(){
  
      }
 
-    //console.log($(".crystal-value"));
+    // create loop to assign value to each button
     $(".crystal-value").each(function(){
         $(this).val(numberOptions[i]);
         i += 1;
         console.log();
     });
-    // create loop to assign value to each button
-    // for (var i = 0; i < numberOptions.length; i++) {
+   
 
-    //     let crystalButton = $(".crystal-value");
-    //     //assign buttons a value
-    //     crystalButton.val(numberOptions[i]);
-    //     }
-    
     // create click event that works for all button clicks
     $("#crystals").on("click", function() {
 
