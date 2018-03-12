@@ -5,24 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Crystal Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./game.js"></script>
   
 
 </head>
 <body>
-    <h1>Number to Guess: <span id="number-to-guess"></span></h1>
-    <h1>Your Score: <span id="score"></span></h1>
-    <h3>Wins: <span id="wins"></span></h3>
-    <h3>Losses: <span id="losses"></span></h3>
-    <div id="crystals">
-        <button type="button" class="crystal-value" id="js-button1" value="0"></button>
-        <button type="button" class="crystal-value" id="js-button2" value="0"></button>
-        <button type="button" class="crystal-value" id="js-button3" value="0"></button>
-        <button type="button" class="crystal-value" id="js-button4" value="0"></button>
-    </div>
+    <header class = "topheader">
+        <div class = "title">Crystals Collector</div>
+    </header>
+    
+    <div class = "container">
+        <div class = "instructions">
+                <p> Instructions: </p>
+                <ol>
+                    <li>You will be given a random crystal value to match at the start of the game.</li> 
+                    <li>There are 4 crystals below. To reveal each crystal's value, you must click on it.</li> 
+                    <li>Each time you click on a crystal, you will add that crystal's value to your score.</li> 
+                    <li>You win the game by matching your crystal value score to the computer generated crystal value.</li>
+                    <li>You lose the game if your crystal value score exceeds the computer generated crystal value.</li> 
+                    <li>Each time the game restarts, the value of the 4 crystals will change.</li> 
+                </ol>
+            </div>
+        
+        <h1 class = "number-guess">Match This Crystal Value: <span id="number-to-guess"></span></h1>
+        
+        <h1 class = "score">Your Crystal Value Score: <span id="score"></span></h1>
 
+        <div class = "stats">
+            <h3 class = "win-win">Wins: <span id="wins"></span></h3>
+            <h3 class = "lose-lose">Losses: <span id="losses"></span></h3>
+        </div>
+        
+        <div class = "crystals-css" id="crystals">
+            <button type="button" class="crystal-value one" id="js-button1" value="0"></button>
+            <button type="button" class="crystal-value two" id="js-button2" value="0"></button>
+            <button type="button" class="crystal-value three" id="js-button3" value="0"></button>
+            <button type="button" class="crystal-value four" id="js-button4" value="0"></button>
+        </div>
+
+    </div>
 </body>
 </html>
 

@@ -1,0 +1,90 @@
+body {
+    background: grey;
+    background: url(https://cdn.pixabay.com/photo/2017/10/11/16/45/cave-2841619__340.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    height:100%;
+    width: 100%;
+}
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;   
+}
+.topheader {
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.title {
+    font-size: 90px;
+}
+.instructions {
+    color: white;
+    border: 2px solid white;
+    font-size: 20px;
+    margin: auto;
+    margin-top: 20px;
+    padding:20px;
+    text-align: left;
+    width: 768px;
+}
+.number-guess, .score {
+    font-size: 40px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    width: 768px;
+}
+.stats {
+    color: white;
+    font-size: 30px;
+    margin: auto;
+    margin-top: 20px;
+    padding:20px;
+    text-align: center;
+    width: 768px;
+}
+.crystals-css {
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    width: 768px;
+}
+.crystal-value {
+    cursor: pointer;
+    height: 85px; 
+    width: 85px;
+}
+.crystal-value.one {
+    background-image: url('./images/emerald.jpg');
+    background-size: 100%;
+}
+.crystal-value.two {
+    background-image: url('./images/sapphire.jpg');
+    background-size: 100%;
+}   
+.crystal-value.three {
+    background-image: url('./images/Citrine.jpg');
+    background-size: 100%;
+}
+.crystal-value.four {
+    background-image: url('./images/diamond.jpg');
+    background-size: 100%;
+}         
+@media (max-width: 375px) {
+    .container {
+      width: 100%;
+    }
+}

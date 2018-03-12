@@ -5,7 +5,6 @@ $(document).ready(function(){
     let counter = 0;
     let crystals = $("#crystals");
     let targetNumber ;
-    let numberOptions = [10, 5, 3, 7];
     let i = 0;
 
     //function init() {
@@ -16,8 +15,8 @@ $(document).ready(function(){
 
         
     function resetGame () {
+        setcrystals();
          counter = 0;
-         numberOptions = [10, 5, 3, 7];
          $("#score").empty();
         
          targetNumber = Math.floor((Math.random() * 100) + 19);
@@ -27,17 +26,18 @@ $(document).ready(function(){
      }
 
     // create loop to assign value to each button
-    $(".crystal-value").each(function(){
-        $(this).val(numberOptions[i]);
-        i += 1;
-        console.log();
-    });
+    function setcrystals () {
+        $(".crystal-value").each(function(){
+            $(this).val(Math.floor((Math.random() * 15) + 1));
+            i += 1;
+        });
+    }
    
-
+    setcrystals();
     // create click event that works for all button clicks
-    $("#crystals").on("click", function() {
+    $(".crystal-value").on("click", function() {
 
-        let crystalValue = ($(".crystal-value").val());
+        let crystalValue = ($(this).val());
         
         //converts string to number
         crystalValue = parseInt(crystalValue);
