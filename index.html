@@ -9,19 +9,19 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./style.css" />
     <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./game.js"></script>
   
 
 </head>
 <body>
-    <header class = "topheader">
-        <div class = "title">Crystals Collector</div>
-    </header>
-    
+
     <div class = "container">
+        
+        <h3 class = "gamename">Crystals Collector</h3>
+    
         <div class = "instructions">
-                <p> Instructions: </p>
-                <ol>
+                <p class="toptitle"> Instructions: </p>
+                <br>
+                <ol class = "list" type="1">
                     <li>You will be given a random crystal value to match at the start of the game.</li> 
                     <li>There are 4 crystals below. To reveal each crystal's value, you must click on it.</li> 
                     <li>Each time you click on a crystal, you will add that crystal's value to your score.</li> 
@@ -31,13 +31,25 @@
                 </ol>
             </div>
         
-        <h1 class = "number-guess">Match This Crystal Value: <span id="number-to-guess"></span></h1>
+        <h2 class = "number-guess">
+            Match This Crystal Value: 
+            <span id="number-to-guess"></span>
+        </h2>
         
-        <h1 class = "score">Your Crystal Value Score: <span id="score"></span></h1>
+        <h2 class = "score">
+            Your Crystal Value Score: 
+            <span id="score"></span>
+        </h2>
 
         <div class = "stats">
-            <h3 class = "win-win">Wins: <span id="wins"></span></h3>
-            <h3 class = "lose-lose">Losses: <span id="losses"></span></h3>
+            <h3 class = "win-win">
+                Wins: 
+                <span id="wins"></span>
+            </h3>
+            <h3 class = "lose-lose">
+                Losses: 
+                <span id="losses"></span>
+            </h3>
         </div>
         
         <div class = "crystals-css" id="crystals">
@@ -48,6 +60,8 @@
         </div>
 
     </div>
+
+    <script src="./game.js"></script>
 </body>
 </html>
 

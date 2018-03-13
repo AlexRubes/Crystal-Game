@@ -48,14 +48,16 @@ $(document).ready(function(){
         $("#score").text(counter);
 
         if (counter === targetNumber) {
-        $("#wins").text(wins++);
-        resetGame();
-        // init();
+            wins++;
+            $("#wins").text(wins);
+            resetGame();
+            // init();
         }
         else if (counter >= targetNumber) {
-        $("#losses").text(losses++);
-        resetGame();
-        // init();
+            losses++;
+            $("#losses").text(losses);
+            resetGame();
+            // init();
         }
 
     });
